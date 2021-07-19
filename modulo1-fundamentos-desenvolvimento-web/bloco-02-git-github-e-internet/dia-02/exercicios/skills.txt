@@ -5,3 +5,4 @@
 - CSS
 - Python
 - Comunicação
+- Tomada de Decisão
