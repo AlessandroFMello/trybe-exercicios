@@ -1,0 +1,10 @@
+vermelho
+azul
+amarelo
+roxo
+verde
+preto
+branco
+azul-marinho
+marrom
+laranja
