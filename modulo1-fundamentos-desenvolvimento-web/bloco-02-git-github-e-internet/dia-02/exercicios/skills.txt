@@ -5,4 +5,5 @@
 - CSS
 - Python
 - Comunicação
+- Liderança
 - Tomada de Decisão
