@@ -60,3 +60,6 @@ tagH1.className = 'title';
 //ALTERACAO 2:
 let tagsH3 = document.getElementsByTagName('h3');
 tagsH3.className = 'description';
+
+//ALTERACAO 3:
+document.getElementsByClassName('left-content').removeChild();
