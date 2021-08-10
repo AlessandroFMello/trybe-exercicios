@@ -20,16 +20,30 @@ centerSection.appendChild(tagP);
 
 //DESAFIO 5:
 let leftSection = document.createElement('section');
+
 leftSection.className = 'left-content';
 tagMain.appendChild(leftSection);
 
 //DESAFIO 6:
 let rightSection = document.createElement('section');
+
 rightSection.className = 'right-content';
 tagMain.appendChild(rightSection);
 
 //DESAFIO 7:
 let image = document.createElement('img');
+
 image.className = 'small-image';
 image.src = 'https://picsum.photos/200';
 leftSection.appendChild(image);
+
+//DESAFIO 8:
+let listaUl = document.createElement('ul');
+let numExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+for (let number in numExtenso) {
+  let li = document.createElement('li');
+  li.innerText = numExtenso[number];
+  listaUl.appendChild(li);
+}
+rightSection.appendChild(listaUl);
