@@ -56,3 +56,7 @@ for (let index = 0; index < 3; index += 1) {
 
 //ALTERACAO 1:
 tagH1.className = 'title';
+
+//ALTERACAO 2:
+let tagsH3 = document.getElementsByTagName('h3');
+tagsH3.className = 'description';
