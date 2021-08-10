@@ -66,3 +66,6 @@ tagMain.removeChild(leftSection);
 
 //ALTERACAO 4:
 rightSection.style.marginRight = 'auto';
+
+//ALTERACAO 5:
+tagMain.style.backgroundColor = 'black';
