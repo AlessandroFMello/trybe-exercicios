@@ -9,11 +9,16 @@ tagMain.className = 'main-content';
 document.body.appendChild(tagMain);
 
 //DESAFIO 3:
-let tagSection = document.createElement('section');
-tagSection.className = 'center-content';
-tagMain.appendChild(tagSection);
+let tagSectionCenter = document.createElement('section');
+tagSectionCenter.className = 'center-content';
+tagMain.appendChild(tagSectionCenter);
 
 //DESAFIO 4:
 let tagP = document.createElement('p');
-tagP.innerText = 'Colocar algum texto relevante aqui'
-tagSection.appendChild(tagP);
+tagP.innerText = 'Colocar algum texto relevante aqui';
+tagSectionCenter.appendChild(tagP);
+
+//DESAFIO 5:
+let tagSectionLeft = document.createElement('section');
+tagSectionLeft.className = 'left-content';
+tagMain.appendChild(tagSectionLeft);
