@@ -62,4 +62,7 @@ let tagsH3 = document.getElementsByTagName('h3');
 tagsH3.className = 'description';
 
 //ALTERACAO 3:
-document.getElementsByClassName('left-content').removeChild();
+tagMain.removeChild(leftSection);
+
+//ALTERACAO 4:
+rightSection.style.marginRight = 'auto';
