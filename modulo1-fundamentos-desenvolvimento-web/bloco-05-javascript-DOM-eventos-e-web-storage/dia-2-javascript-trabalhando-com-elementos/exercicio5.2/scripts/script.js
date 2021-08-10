@@ -22,3 +22,8 @@ tagSectionCenter.appendChild(tagP);
 let tagSectionLeft = document.createElement('section');
 tagSectionLeft.className = 'left-content';
 tagMain.appendChild(tagSectionLeft);
+
+//DESAFIO 6:
+let tagSectionRight = document.createElement('section');
+tagSectionRight.className = 'right-content';
+tagMain.appendChild(tagSectionRight);
