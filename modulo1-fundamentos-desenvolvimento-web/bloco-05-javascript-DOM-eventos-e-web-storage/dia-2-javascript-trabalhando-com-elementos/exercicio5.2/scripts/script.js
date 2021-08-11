@@ -1,17 +1,17 @@
 //DESAFIO 1:
-let tagH1 = document.createElement('h1');
-tagH1.innerText = 'Exercício 5.2 - JavaScript DOM';
-document.body.appendChild(tagH1);
+let h1 = document.createElement('h1');
+h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+document.body.appendChild(h1);
 
 //DESAFIO 2:
-let tagMain = document.createElement('main');
-tagMain.className = 'main-content';
-document.body.appendChild(tagMain);
+let main = document.createElement('main');
+main.className = 'main-content';
+document.body.appendChild(main);
 
 //DESAFIO 3:
 let centerSection = document.createElement('section');
 centerSection.className = 'center-content';
-tagMain.appendChild(centerSection);
+main.appendChild(centerSection);
 
 //DESAFIO 4:
 let tagP = document.createElement('p');
@@ -22,13 +22,13 @@ centerSection.appendChild(tagP);
 let leftSection = document.createElement('section');
 
 leftSection.className = 'left-content';
-tagMain.appendChild(leftSection);
+main.appendChild(leftSection);
 
 //DESAFIO 6:
 let rightSection = document.createElement('section');
 
 rightSection.className = 'right-content';
-tagMain.appendChild(rightSection);
+main.appendChild(rightSection);
 
 //DESAFIO 7:
 let image = document.createElement('img');
@@ -38,34 +38,43 @@ image.src = 'https://picsum.photos/200';
 leftSection.appendChild(image);
 
 //DESAFIO 8:
-let listaUl = document.createElement('ul');
+let ul = document.createElement('ul');
 let numExtenso = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
 for (let number in numExtenso) {
   let li = document.createElement('li');
+  li.className = 'li';
   li.innerText = numExtenso[number];
-  listaUl.appendChild(li);
+  ul.appendChild(li);
 }
-rightSection.appendChild(listaUl);
+rightSection.appendChild(ul);
 
 //DESAFIO 9:
 for (let index = 0; index < 3; index += 1) {
   let h3 = document.createElement('h3');
-  tagMain.appendChild(h3);
+  main.appendChild(h3);
 }
 
 //ALTERACAO 1:
-tagH1.className = 'title';
+h1.className = 'title';
 
 //ALTERACAO 2:
 let tagsH3 = document.getElementsByTagName('h3');
 tagsH3.className = 'description';
 
 //ALTERACAO 3:
-tagMain.removeChild(leftSection);
+main.removeChild(leftSection);
 
 //ALTERACAO 4:
 rightSection.style.marginRight = 'auto';
 
 //ALTERACAO 5:
-tagMain.style.backgroundColor = 'black';
+main.style.backgroundColor = 'green';
+
+//ALTERACAO 6:
+if(ul.lastChild.innerText === 'dez'){
+  ul.lastChild.remove();
+}
+if(ul.lastChild.innerText === 'nove'){
+  ul.lastChild.remove();
+}
