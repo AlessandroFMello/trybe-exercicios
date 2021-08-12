@@ -43,29 +43,45 @@ function sortDaysAndHolidays () {
 
 sortDaysAndHolidays();
 
-function createHolidayButton(string) {
+function createHolidayButton(holidayString) {
   let myButton = document.createElement('button');
   myButton.id = `btn-holiday`;
-  myButton.innerText = `${string}`;
+  myButton.innerText = `${holidayString}`;
   let father = document.querySelector('.buttons-container');
   father.appendChild(myButton);
 }
 
-let string = 'Feriados';
-createHolidayButton(string);
-
-function addClickEvent() {
-  let button = document.getElementById('btn-holiday');
+let holidayString = 'Feriados';
+createHolidayButton(holidayString);
+function addClickEvent(tag, color) {
+  let button = document.getElementById(`btn-${tag}`);
   button.addEventListener('click', function () {
-    let holidays = document.querySelectorAll('.holiday')
+    let holidays = document.querySelectorAll(`.${tag}`)
     holidays.forEach((item) => {
-      if (item.style.backgroundColor == 'red') {
+      if (item.style.backgroundColor == color) {
         item.style.backgroundColor = "rgb(238, 238, 238)";
       } else {
-        item.style.backgroundColor = 'red';
+        item.style.backgroundColor = color;
       }
     })
   })
 }
 
-addClickEvent();
+let holidayTag = 'holiday';
+let holidayColor = 'red';
+addClickEvent(holidayTag, holidayColor);
+
+function createFridayButton (fridayString) {
+  let myButton = document.createElement('button');
+  myButton.id = `btn-friday`;
+  myButton.innerText = `${fridayString}`;
+  let father = document.querySelector('.buttons-container');
+  father.appendChild(myButton);
+}
+
+let fridayString = 'Sexta-Feira';
+createFridayButton(fridayString);
+
+let fridayTag = 'friday';
+let fridaycolor = 'green';
+addClickEvent(fridayTag, fridaycolor);
