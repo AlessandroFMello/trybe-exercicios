@@ -42,3 +42,14 @@ function sortDaysAndHolidays () {
 }
 
 sortDaysAndHolidays();
+
+function createHolidayButton(string) {
+  let myButton = document.createElement('button');
+  myButton.id = `btn-holiday`;
+  myButton.innerText = `${string}`;
+  let father = document.querySelector('.buttons-container');
+  father.appendChild(myButton);
+}
+
+let string = 'Feriados';
+createHolidayButton(string);
