@@ -14,6 +14,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+//EXERCÍCIO 1
 function sortDaysAndHolidays () {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const holidays = [24, 25, 31];
@@ -43,6 +44,7 @@ function sortDaysAndHolidays () {
 
 sortDaysAndHolidays();
 
+//EXERCÍCIO 2
 function createHolidayButton(holidayString) {
   let myButton = document.createElement('button');
   myButton.id = `btn-holiday`;
@@ -53,6 +55,8 @@ function createHolidayButton(holidayString) {
 
 let holidayString = 'Feriados';
 createHolidayButton(holidayString);
+
+//EXERCÍCIO 3
 function addClickEvent(tag, color) {
   let button = document.getElementById(`btn-${tag}`);
   button.addEventListener('click', function () {
@@ -71,6 +75,7 @@ let holidayTag = 'holiday';
 let holidayColor = 'red';
 addClickEvent(holidayTag, holidayColor);
 
+//EXERCÍCIO 4
 function createFridayButton (fridayString) {
   let myButton = document.createElement('button');
   myButton.id = `btn-friday`;
@@ -82,6 +87,9 @@ function createFridayButton (fridayString) {
 let fridayString = 'Sexta-Feira';
 createFridayButton(fridayString);
 
+//EXERCÍCIO 5
 let fridayTag = 'friday';
 let fridaycolor = 'green';
 addClickEvent(fridayTag, fridaycolor);
+
+//EXERCÍCIO 6
