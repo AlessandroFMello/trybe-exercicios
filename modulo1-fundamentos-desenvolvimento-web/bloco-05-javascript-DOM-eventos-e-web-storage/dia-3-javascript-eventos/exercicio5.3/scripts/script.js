@@ -93,3 +93,12 @@ let fridaycolor = 'green';
 addClickEvent(fridayTag, fridaycolor);
 
 //EXERCÍCIO 6
+function zoom () {
+  let days = document.getElementById('days');
+  console.log(days);
+  days.addEventListener('mouseover', function () {
+    days.style.fontSize = '40px';
+  })
+} 
+
+zoom();
