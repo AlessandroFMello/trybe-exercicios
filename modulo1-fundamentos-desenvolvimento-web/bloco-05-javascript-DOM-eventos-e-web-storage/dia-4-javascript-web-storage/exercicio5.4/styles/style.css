@@ -1,0 +1,10 @@
+#header {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 20%;
+  background-color: green;
+}
+.title {
+  background-color: green;
+}
