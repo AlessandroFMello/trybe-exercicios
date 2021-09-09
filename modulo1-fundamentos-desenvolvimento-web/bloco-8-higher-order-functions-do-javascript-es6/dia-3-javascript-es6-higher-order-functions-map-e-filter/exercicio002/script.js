@@ -66,45 +66,49 @@ const books = [
 
 // Adicione o código do exercício aqui:
 const expectedResult = [
-  { 
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    genre: 'Fantasia',
-    author: { name: 'George R. R. Martin', birthYear: 1948 },
-    releaseYear: 1991
+  {
+    age: 31,
+    author: 'Isaac Asimov',
   },
   {
-    id: 2,
-    name: 'O Senhor dos Anéis',
-    genre: 'Fantasia',
-    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
-    releaseYear: 1954
+    age: 38,
+    author: 'H. P. Lovecraft',
   },
   {
-    id: 3,
-    name: 'Fundação',
-    genre: 'Ficção Científica',
-    author: { name: 'Isaac Asimov', birthYear: 1920 },
-    releaseYear: 1951
+    age: 39,
+    author: 'Stephen King',
   },
   {
-    id: 4,
-    name: 'Duna',
-    genre: 'Ficção Científica',
-    author: { name: 'Frank Herbert', birthYear: 1920 },
-    releaseYear: 1965
-  }
+    age: 43,
+    author: 'George R. R. Martin',
+  },
+  {
+    age: 45,
+    author: 'Frank Herbert',
+  },
+  {
+    age: 62,
+    author: 'J. R. R. Tolkien',
+  },
 ];
 
-function fantasyOrScienceFiction(objectsList) {
+function nameAndAge(objectList) {
   // escreva seu código aqui
-  const verifyObject = (object) => object.genre ==='Fantasia' || object.genre ==='Ficção' || object.genre === 'Ficção Científica';
+  const objectsArray = [];
+  objectList.map((object) => {
+    const age = object.releaseYear - object.author.birthYear;
+    const name = object. author.name;
+    const authorInfo = {};
+    authorInfo.age = age;
+    authorInfo.author = name;
+    
+    objectsArray.push(authorInfo)
+  });
 
-  const verifiedObjects = objectsList.filter(verifyObject);
-
-  return verifiedObjects;
+  objectsArray.sort((a,b) => a.age - b.age);
+  return objectsArray;
 }
 
-console.log(fantasyOrScienceFiction(books));
+console.log(nameAndAge(books));
 
-assert.deepStrictEqual(fantasyOrScienceFiction(books), expectedResult);
+assert.deepStrictEqual(nameAndAge(books), expectedResult);
