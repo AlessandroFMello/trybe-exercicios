@@ -5,6 +5,7 @@ describe('Testa a função generateRandomNumber', () => {
     randomNumber.generateRandomNumber = jest
       .fn()
       .mockReturnValueOnce(10);
+  
     expect(randomNumber.generateRandomNumber()).toEqual(10);
     expect(randomNumber.generateRandomNumber).toHaveBeenCalledTimes(1);
   });
